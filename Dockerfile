@@ -57,7 +57,7 @@ RUN chown postgres /usr/local/pgsql/data
  
 RUN su - postgres -c '/usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data'
 #RUN echo "su - postgres -c '/usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data >/home/postgres/logfile 2>&1 &'" > /bin/start_pg
-RUN echo "/usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data >logfile 2>&1 &" > /bin/start_pg
+RUN echo "/usr/local/pgsql/bin/postgres -D /usr/local/pgsql/data >/home/postgres/logfile 2>&1 &" > /bin/start_pg
 RUN chmod +x /bin/start_pg
 
 #RUN /usr/local/pgsql/bin/createdb test
