@@ -7,6 +7,8 @@ FROM debian:latest
 ARG parallel_compile_cores=32
 ARG pgsql_version="9.4.1"
 
+EXPOSE 5432/TCP
+
 ARG DEBIAN_FRONTEND=noninteractive
 
 # basic install stuff
